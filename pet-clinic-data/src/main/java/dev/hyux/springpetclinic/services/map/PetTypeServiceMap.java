@@ -1,26 +1,25 @@
 package dev.hyux.springpetclinic.services.map;
 
-import dev.hyux.springpetclinic.model.Vet;
-import dev.hyux.springpetclinic.services.VetService;
+import dev.hyux.springpetclinic.model.PetType;
+import dev.hyux.springpetclinic.services.PetTypeService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
-
+public class PetTypeServiceMap extends AbstractServiceMap<PetType, Long> implements PetTypeService {
     @Override
-    public Set<Vet> findAll() {
+    public Set<PetType> findAll() {
         return super.findAll();
     }
 
     @Override
-    public Vet findById(Long id) {
+    public PetType findById(Long id) {
         return super.findById(id);
     }
 
     @Override
-    public Vet save(Vet object) {
+    public PetType save(PetType object) {
         return super.save(object);
     }
 
@@ -30,7 +29,7 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements VetS
     }
 
     @Override
-    public void delete(Vet object) {
+    public void delete(PetType object) {
         super.delete(object);
     }
 }
