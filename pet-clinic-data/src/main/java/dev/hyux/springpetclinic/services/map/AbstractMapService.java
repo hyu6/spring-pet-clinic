@@ -18,7 +18,7 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
 
     T save(T object) {
         if (object == null) {
-            throw new RuntimeException("Null Object");
+            throw new RuntimeException("Object cannot be null");
         }
 
         if (object.getId() == null) {
