@@ -3,11 +3,13 @@ package dev.hyux.springpetclinic.services.map;
 import dev.hyux.springpetclinic.model.Vet;
 import dev.hyux.springpetclinic.services.SpecialtyService;
 import dev.hyux.springpetclinic.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
 
     private final SpecialtyService specialtyService;
